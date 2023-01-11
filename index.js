@@ -9,13 +9,16 @@ require("./db");
 require("./models/User");
 
 const authRoutes = require("./routes/authRoutes");
+const requireToken = require("./Middlewares/AuthTokenRequired");
 //
 app.use(bodyParser.json());
 app.use(authRoutes);
 //
 
-app.get("/", (req, res) => {
-  res.send("Ceci est la home page");
+app.get("/", requireToken, (req, res) => {
+  // res.send(`Your email: ${req.user.email}`);
+  console.log(req.user);
+  res.send(req.user);
 });
 
 app.listen(port, () => {
