@@ -85,18 +85,20 @@ router.post("/verify", (req, res) => {
     }
 
     try {
-      
       let verificationCode = Math.floor(100000 + Math.random() * 900000);
       let user = [
         {
           name,
           email,
           password,
-          verificationCode
-        }
-      ]
+          verificationCode,
+        },
+      ];
       await mailer(email, verificationCode);
-      res.send({message: "Vérification de code envoyé à votre email", userdata: user});
+      res.send({
+        message: "Vérification de code envoyé à votre email",
+        userdata: user,
+      });
     } catch (err) {
       console.log(err);
     }
