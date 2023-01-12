@@ -6,10 +6,9 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import image from '../../../assets/images/background.png';
+import image from '../../../../assets/images/background.png';
 import VectorIcon from '../Icons/VectorIcons';
 import styles from '../../../common/formRegistercss';
-
 
 const Register = ({navigation}) => {
   const [fdata, setFdata] = useState({
@@ -26,7 +25,7 @@ const Register = ({navigation}) => {
       setErrormsg('Tous les champs sont obligatoires');
       return;
     } else {
-      fetch('http://192.168.43.58:3000/signup', {
+      fetch('http://10.58.133.21:3000/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +38,6 @@ const Register = ({navigation}) => {
           if (data.error) {
             setErrormsg(data.error);
           } else {
-            alert('Votre compte a été crée avec succès !');
             navigation.navigate('Login');
           }
         });
@@ -88,7 +86,7 @@ const Register = ({navigation}) => {
             onPress={() => Sendtobackend()}>
             <Text style={styles.buttonText}>S'inscrire</Text>
           </TouchableOpacity>
-          <View style={styles.contentContainerText}>
+          <View style={styles.contentContainerTextWhere}>
             <Text style={styles.TextBottomSheet}>Ou</Text>
           </View>
           <View style={styles.contentContainerIcons}>
@@ -110,6 +108,5 @@ const Register = ({navigation}) => {
     </View>
   );
 };
-
 
 export default Register;

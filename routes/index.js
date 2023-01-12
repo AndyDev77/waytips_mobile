@@ -6,6 +6,7 @@ import Home from '../src/components/screens/Home/Home';
 import Register from '../src/components/screens/Home/RegisterScreen';
 import Login from '../src/components/screens/Home/LoginScreen';
 import Themes from '../src/components/screens/Themes/ThemeScreen';
+import ResumeUser from '../src/components/screens/ResumeUser/ResumeUser';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const Routes = () => {
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Themes" component={Themes} />
+        <Stack.Screen name="ResumeUser" component={ResumeUser} />
       </Stack.Navigator>
     </NavigationContainer>
   );

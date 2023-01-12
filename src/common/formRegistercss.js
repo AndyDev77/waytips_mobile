@@ -51,6 +51,11 @@ const styles = StyleSheet.create({
     margin: 10,
     alignItems: 'center',
   },
+  contentContainerTextWhere: {
+    flex: 0.5,
+    marginTop: 10,
+    alignItems: 'center',
+  },
   TextBottomSheet: {
     color: '#7D56C2',
     fontFamily: 'Poppins',
@@ -78,7 +83,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    marginTop: -50,
+    marginTop: -40,
   },
   errormessage: {
     color: 'white',

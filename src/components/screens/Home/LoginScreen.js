@@ -23,7 +23,7 @@ const Login = ({navigation}) => {
       setErrormsg('Tous les champs sont obligatoires');
       return;
     } else {
-      fetch('http://192.168.43.58:3000/signin', {
+      fetch('http://10.58.133.21:3000/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,6 @@ const Login = ({navigation}) => {
           if (data.error) {
             setErrormsg(data.error);
           } else {
-            alert('Connexion avec succès !');
             navigation.navigate('Themes');
           }
         });
@@ -78,7 +77,7 @@ const Login = ({navigation}) => {
             onPress={() => Sendtobackend()}>
             <Text style={styles.buttonText}>Connexion</Text>
           </TouchableOpacity>
-          <View style={styles.contentContainerText}>
+          <View style={styles.contentContainerTextWhere}>
             <Text style={styles.TextBottomSheet}>Ou</Text>
           </View>
           <View style={styles.contentContainerIcons}>
@@ -97,7 +96,7 @@ const Login = ({navigation}) => {
                 Inscrivez-vous
               </Text>
             </Text>
-            <Text style={styles.forgotpassword}>Mot de passe oublié ?</Text>
+            {/* <Text style={styles.forgotpassword}>Mot de passe oublié ?</Text> */}
           </View>
         </View>
       </ImageBackground>

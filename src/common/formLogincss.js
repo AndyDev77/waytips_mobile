@@ -35,20 +35,25 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '70%',
+    height: '60%',
   },
   containerCustom2: {
     display: 'flex',
     backgroundColor: '#fff',
     paddingTop: 35,
     width: '100%',
-    height: '95%',
+    height: '90%',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
   contentContainerText: {
     flex: 1,
-    margin: 5,
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  contentContainerTextWhere: {
+    flex: 0.2,
+    marginTop: 10,
     alignItems: 'center',
   },
   TextBottomSheet: {
@@ -61,11 +66,11 @@ const styles = StyleSheet.create({
   spanText: {
     color: '#FFAB00',
   },
-  forgotpassword: {
-    color: '#7D56C2',
-    alignSelf: 'center',
-    margin: 10,
-  },
+  // forgotpassword: {
+  //   color: '#7D56C2',
+  //   alignSelf: 'center',
+  //   margin: 10,
+  // },
   formgroup: {
     display: 'flex',
     justifyContent: 'center',
@@ -83,7 +88,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    marginTop: -180,
+    marginTop: -10,
   },
   errormessage: {
     color: 'white',

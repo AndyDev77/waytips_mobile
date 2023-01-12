@@ -23,7 +23,9 @@ const Home = ({navigation}) => {
           <View style={styles.contentContainerText}>
             <Text style={styles.TextBottomSheet}>Ou</Text>
           </View>
-          <VectorIcon />
+          <View style={styles.contentContainerIcons}>
+            <VectorIcon />
+          </View>
           <View style={styles.contentContainerText}>
             <Text style={styles.TextBottomSheet}>
               Vous êtes déjà inscrits ?

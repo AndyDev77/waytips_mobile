@@ -1,43 +1,38 @@
-import {Component} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {Text, View, StyleSheet, Image} from 'react-native';
+import google from '../../../../assets/images/google.png';
+import apple from '../../../../assets/images/apple.png';
+import facebook from '../../../../assets/images/facebook.png';
 
-export default class VectorIcon extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <View style={styles.contentContainerIcons}>
-        <View style={styles.contentContainerIconsView}>
-          <Text style={styles.contentContainerIconsImg}>
-            <FontAwesome name="google" size={25} color="#d63031" />
-          </Text>
-        </View>
-        <View style={styles.contentContainerIconsView}>
-          <Text style={styles.contentContainerIconsImg}>
-            <FontAwesome name="apple" size={25} color="black" />
-          </Text>
-        </View>
-        <View style={styles.contentContainerIconsView}>
-          <Text style={styles.contentContainerIconsImg}>
-            <FontAwesome5 name="facebook" size={25} color="darkblue" />
-          </Text>
-        </View>
+const VectorIcon = () => {
+  return (
+    <View style={styles.contentContainerIcons}>
+      <View style={styles.contentContainerIconsView}>
+        <Text style={styles.contentContainerIconsImg}>
+          <Image source={google} size={25}></Image>
+        </Text>
       </View>
-    );
-  }
-}
+      <View style={styles.contentContainerIconsView}>
+        <Text style={styles.contentContainerIconsImg}>
+          <Image source={apple} size={25}></Image>
+        </Text>
+      </View>
+      <View style={styles.contentContainerIconsView}>
+        <Text style={styles.contentContainerIconsImg}>
+          <Image source={facebook} size={25}></Image>
+        </Text>
+      </View>
+    </View>
+  );
+};
+
+export default VectorIcon;
 
 const styles = StyleSheet.create({
   contentContainerIcons: {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    marginTop: -70,
+    // marginTop: -7,
     marginBottom: 10,
   },
   contentContainerIconsView: {
@@ -51,7 +46,8 @@ const styles = StyleSheet.create({
   },
   contentContainerIconsImg: {
     flex: 1,
+    justifyContent: 'center',
     textAlign: 'center',
-    margin: 15,
+    margin: 10,
   },
 });
