@@ -15,7 +15,9 @@ const ResumeUser = ({navigation}) => {
         </View>
         <View style={styles.containerCustom2}>
           <View style={styles.contentContainerText}>
-            <Text style={styles.TextBottomSheet}>Bounjour c'est moi !!</Text>
+            <Text style={styles.TextBottomSheet}>
+              Bonjour, je suis John Doe
+            </Text>
           </View>
         </View>
       </ImageBackground>
