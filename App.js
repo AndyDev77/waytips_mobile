@@ -2,6 +2,8 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Routes from './routes';
 
+// Page accueil avec les routes Waytips
+
 const App = () => {
   return (
     <View style={styles.root}>
@@ -9,7 +11,6 @@ const App = () => {
     </View>
   );
 };
-
 
 const styles = StyleSheet.create({
   root: {
