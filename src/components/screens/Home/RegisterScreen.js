@@ -25,7 +25,7 @@ const Register = ({navigation}) => {
       setErrormsg('Tous les champs sont obligatoires');
       return;
     } else {
-      fetch('http://10.58.133.21:3000/signup', {
+      fetch('http://192.168.43.58:3000/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

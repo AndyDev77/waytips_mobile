@@ -5,23 +5,21 @@ import {
   View,
   ImageBackground,
   Pressable,
-  Alert,
 } from 'react-native';
 import image from '../../../../assets/images/background.png';
 import styles from '../../../common/formThemescss';
-import {createStackNavigator} from 'react-navigation';
 
 class Themes extends Component {
   constructor(props) {
     super(props);
     this.state = {
       ProposThemes: [
-        {themes: 'Attraction'},
-        {themes: 'Sport'},
-        {themes: 'Détente'},
-        {themes: 'Famille'},
-        {themes: 'Musée'},
-        {themes: 'Monument'},
+        {themes1: 'Attraction'},
+        {themes2: 'Sport'},
+        {themes3: 'Détente'},
+        {themes4: 'Famille'},
+        {themes5: 'Musée'},
+        {themes6: 'Monument'},
       ],
     };
   }
@@ -70,11 +68,37 @@ class Themes extends Component {
               {ProposThemes.map((item, index) => {
                 return (
                   <Pressable
-                    style={styles.buttonThemes}
+                    key={[
+                      item.themes1,
+                      item.themes2,
+                      item.themes3,
+                      item.themes4,
+                      item.themes5,
+                      item.themes6,
+                    ]}
+                    style={[
+                      styles.buttonThemes,
+                      item.isSelected
+                        ? {
+                            backgroundColor: '#7D56C2',
+                            borderColor: '#7D56C2',
+                          }
+                        : {backgroundColor: 'white'},
+                    ]}
                     onPress={() => this.selectionHandler(index)}>
-                    <Text style={styles.buttonTextThemes}>{item.themes}</Text>
-                    <Text style={styles.buttonTextThemes}>
-                      {item.isSelected ? 'Selected' : 'Not selected'}
+                    <Text
+                      style={[
+                        styles.buttonTextThemes,
+                        item.isSelected ? {color: 'white'} : {color: '#7D56C2'},
+                      ]}>
+                      {[
+                        item.themes1,
+                        item.themes2,
+                        item.themes3,
+                        item.themes4,
+                        item.themes5,
+                        item.themes6,
+                      ]}
                     </Text>
                   </Pressable>
                 );
